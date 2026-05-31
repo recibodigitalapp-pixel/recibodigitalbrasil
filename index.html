@@ -1,42 +1,124 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GAT - Controle de Corridas</title>
-    <meta
-      name="description"
-      content="Baixe o app GAT para Android: controle corridas, recibos, receitas, despesas, metas e lembretes."
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="download-page">
-      <section class="hero" aria-labelledby="app-title">
-        <img class="logo" src="./assets/logo.png" alt="Logo do app GAT" />
-
-        <p class="eyebrow">App Android para motoristas</p>
-        <h1 id="app-title">GAT</h1>
-        <h2>Controle suas corridas em um só lugar</h2>
-
-        <p class="copy">
-          Baixe o app para lançar receitas e despesas, criar recibos, acompanhar jornadas,
-          consumo de combustível, metas e lembretes importantes.
-        </p>
-
-        <a class="download-button" href="./GAT-com-recibo.apk" download>
-          DOWNLOAD APP
-        </a>
-
-        <p class="note">Clique acima para baixar o arquivo GAT-com-recibo.apk</p>
-
-        <ul class="features" aria-label="Funcionalidades do GAT">
-          <li>Recibos digitais</li>
-          <li>Receitas e despesas</li>
-          <li>Jornadas e metas</li>
-          <li>Alertas e vistorias</li>
-        </ul>
-      </section>
-    </main>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Digital - Táxi Agendado</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Background Image Layer */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1556122071-e404be7474bc?q=80&w=2000&auto=format&fit=crop'); /* Imagem de taxi em cidade */
+            background-size: cover;
+            background-position: center;
+        }
+        /* Overlay Escuro para Legibilidade */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .content-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            margin: -100px auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-size: 50px;
+        }
+        h1 {
+            font-size: 32pt;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 16pt;
+            color: #facc15; /* Amarelo Táxi */
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        p {
+            font-size: 12pt;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            color: #e2e8f0;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #22c55e;
+            color: white;
+            padding: 15px 40px;
+            font-size: 14pt;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transition: transform 0.2s;
+        }
+        .footer-info {
+            margin-top: 20px;
+            font-size: 9pt;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay">
+            <div class="content-card">
+                <div class="logo-circle">🚖</div>
+                <h1>Recibo Digital</h1>
+                <h2>Pare de gastar dinheiro com recibos de papel</h2>
+                <p>
+                    Baixe o app e faça os recibos dos seus passageiros de forma digital e envie instantaneamente por <strong>WhatsApp</strong> ou <strong>E-mail</strong>.
+                </p>
+                <a href="recibo.apk" class="download-btn">DOWNLOAD APP</a>
+                <div class="footer-info">
+                    Clique acima para baixar o arquivo recibo.apk
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
